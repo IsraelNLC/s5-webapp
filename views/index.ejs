@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-row{
+            display: flex;
+            flex-direction: row;
+        }
+        table{
+            text-align: center;
+        }
+        tr{
+            border-style: solid;
+        }
+        th{
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <h3>Olá, esse é meu site de acessos!</h3>
+            <h3>Ele está hospedado na AWS utilizando um EC2 e um RDS.</h3>
+        </div>
+
+        <div class="container">
+            <h3>Adicione seu nome e email para registrar seu acesso!</h3>
+            <form action="/addUser" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data</th>
+                </tr>
+                <% for(let i = 0; i < usuarios.length; i++){ %>
+                    <tr>
+                        <td><%= usuarios[i].id %></td>
+                        <td><%= usuarios[i].nome %></td>
+                        <td><%= usuarios[i].email %></td>
+                        <td><%= usuarios[i].data_acesso.toISOString().split('T')[0] %></td>
+                    </tr>
+                <% } %>
+                
+            </table>
+        </div>
+    </div>
+</body>
+</html>
