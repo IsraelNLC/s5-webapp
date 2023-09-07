@@ -122,10 +122,6 @@ class App {
           connection.end();
         });
       });
-
-      this.express.get('/secret', (req, res) => {
-        res.render('secret');
-      });
       
     }
 
