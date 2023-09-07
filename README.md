@@ -7,6 +7,8 @@ Neste repositório, apresento uma aplicação WEB em nuvem utilizando a AWS. For
 
 │   package.json
 
+│   README.md
+
 │
 
 └───views
