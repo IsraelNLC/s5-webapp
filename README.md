@@ -4,21 +4,26 @@ Neste repositório, apresento uma aplicação WEB em nuvem utilizando a AWS. For
 # Estrutura
 
 │   app.js
+
 │   package.json
+
 │
+
 └───views
+
         index.ejs
-app.js 
+        
+## app.js 
 
 Arquivo do servidor em Node.js
 
-package.json
+## package.json
 
 Dependências do projeto para serem instaladas
 
-/views/index.ejs
+## /views/index.ejs
 
 Interface WEB que será renderizada.
 
-# Demonstação
+# Demonstração
 https://youtu.be/w8dW9pxjY50
